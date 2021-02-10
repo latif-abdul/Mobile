@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SubInvertActivity"
+    android:orientation="vertical"
+    android:id="@+id/subLayout"
+    android:background="@color/cardview_light_background">
+    <ImageView
+        android:id="@+id/mainPic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:transitionName="fade_trans"
+        android:scaleType="fitCenter"/>
+    <TextView
+        android:id="@+id/mainName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text=""/>
+    <TextView
+        android:id="@+id/mainDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""/>
+
+
+
+</LinearLayout>

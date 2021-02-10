@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/playLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlayActivity"
+    android:orientation="vertical">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/playTitleCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="7dp"
+        app:cardElevation="6dp">
+
+        <TextView
+            android:id="@+id/playTitleTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/soccer_match_score"
+            android:layout_gravity="center"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/home"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/homeLogo"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_marginTop="28dp"
+                android:src="@drawable/teamlogo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.306"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/homeTeam" />
+
+            <ImageButton
+                android:id="@+id/addHomeYellow"
+                android:layout_height="40dp"
+                android:layout_width="40dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="16dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_yellow_card"
+                app:layout_constraintStart_toEndOf="@+id/addHomeScore"
+                app:layout_constraintTop_toBottomOf="@+id/homeLogo" />
+
+            <ImageButton
+                android:id="@+id/addHomeScore"
+                android:layout_height="40dp"
+                android:layout_width="40dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="16dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_goal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/homeLogo" />
+
+            <ImageButton
+                android:id="@+id/addHomeRed"
+                android:layout_height="40dp"
+                android:layout_width="40dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="16dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_red_card"
+                app:layout_constraintStart_toEndOf="@+id/addHomeYellow"
+                app:layout_constraintTop_toBottomOf="@+id/homeLogo" />
+
+            <TextView
+                android:id="@+id/homeTeam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_team"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/homeScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="84dp"
+                android:layout_marginTop="44dp"
+                android:text="0"
+                android:textSize="36sp"
+                app:layout_constraintStart_toEndOf="@+id/homeLogo"
+                app:layout_constraintTop_toBottomOf="@+id/homeTeam" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:text="VS"
+        android:layout_gravity="center"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/away"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/addAwayScore"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="108dp"
+                android:layout_marginTop="28dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_goal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/awayLogo" />
+
+            <ImageButton
+                android:id="@+id/addAwayRed"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="28dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_red_card"
+                app:layout_constraintStart_toEndOf="@+id/addAwayYellow"
+                app:layout_constraintTop_toBottomOf="@+id/awayLogo" />
+
+            <ImageButton
+                android:id="@+id/addAwayYellow"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="28dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_yellow_card"
+                app:layout_constraintStart_toEndOf="@+id/addAwayScore"
+                app:layout_constraintTop_toBottomOf="@+id/awayLogo" />
+
+            <ImageView
+                android:id="@+id/awayLogo"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/teamlogo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.315"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/awayTeam" />
+
+            <TextView
+                android:id="@+id/awayTeam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/away_team"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/awayScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="92dp"
+                android:layout_marginTop="40dp"
+                android:text="0"
+                android:textSize="36sp"
+                app:layout_constraintStart_toEndOf="@+id/awayLogo"
+                app:layout_constraintTop_toBottomOf="@+id/awayTeam" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/timerShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00:00"
+            android:textAlignment="center"/>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/matchStartBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:enabled="true" />
+        <Button
+            android:id="@+id/matchFinishBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Finish"
+            android:enabled="false"
+            android:layout_marginLeft="10dp"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <FrameLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
